@@ -34,16 +34,26 @@ font pango:DejaVu Sans Mono 9
 ##
 
 # Set workspace names (http://fontawesome.io/)
-set $WS1 
-set $WS2 
-set $WS3 
-set $WS4 
-set $WS5 
-set $WS6 
-set $WS7 
-set $WS8 
-set $WS9 
-set $WS0 
+#set $WS1 
+#set $WS2 
+#set $WS3 
+#set $WS4 
+#set $WS5 
+#set $WS6 
+#set $WS7 
+#set $WS8 
+#set $WS9 
+#set $WS0 
+set $WS1 1
+set $WS2 2
+set $WS3 3
+set $WS4 4
+set $WS5 5
+set $WS6 6
+set $WS7 7
+set $WS8 8
+set $WS9 9
+set $WS0 0
 
 
 ##
@@ -170,6 +180,17 @@ bindsym $mod+Shift+0 move container to workspace $WS0
 bindsym $mod+m move workspace to output right
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
+
+##
+## Look-and-feel
+##
+
+#                       BORDER  BACKGR  TEXT   INDICATOR  CHILD_BORDER
+client.focused          $base00 $base02 $base00 $base00   $base00
+client.focused_inactive $base00 $base00 $base00 $base00
+client.unfocused        $base00 $base00 $base00 $base00
+client.urgent           $base08 $base00 $base00 $base00
 
 
 ##
@@ -324,7 +345,7 @@ exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-ico
 exec --no-startup-id xrdb -merge ~/.Xdefaults
 
 # Set wallpaper
-#exec --no-startup-id /home/jonmd/scripts/selected_wallpaper.sh
+exec --no-startup-id /home/jonmd/scripts/selected_wallpaper.sh
 
 # Start a window compositor (https://wiki.archlinux.org/index.php/Compton)
 #exec --no-startup-id compton --config ~/.compton.conf -b
