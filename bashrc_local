@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Show the git branch in command prompt
+export PS1='\u@\h:\w\[\e[34m\]$(__git_ps1 " %s ")\[\e[0m\]$ '
+
+# vim:filetype=sh

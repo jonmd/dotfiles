@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Local binaries
+if [ -d "$HOME/.bin" ]; then
+    export PATH="$PATH"
+fi
+
+exec dmenu_run
