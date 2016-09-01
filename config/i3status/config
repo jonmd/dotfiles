@@ -37,21 +37,21 @@ run_watch VPN {
 }
 
 tztime local {
-    format = "   %Y-%m-%d %H:%M"
+    format = "    %Y-%m-%d %H:%M "
 }
 
 load {
-    format = "   %1min %5min %15min "
+    format = "    %1min %5min %15min "
 }
 
 disk "/" {
     prefix_type = "custom"
-    format = "   %avail "
+    format = "    %avail "
 }
 
 volume master {
-    format = "   %volume "
-    format_muted = "   %volume "
+    format = "    %volume "
+    format_muted = "    %volume "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
