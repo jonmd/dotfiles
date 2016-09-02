@@ -6,9 +6,6 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-" Invoke pathogen
-execute pathogen#infect()
-
 " Use comma as <Leader> key
 let mapleader=","
 
