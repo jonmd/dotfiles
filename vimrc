@@ -24,13 +24,17 @@ call vundle#begin()
   " Ctrl + P (Fuzzy search file opener)
   Plugin 'kien/ctrlp.vim'
 
+  " Theme: Gruvbox
+  Plugin 'morhetz/gruvbox'
+
 call vundle#end()
 filetype plugin indent on
 " VUNDLE END
 
-" Workaround! gnome-terminal supports 256 colors, but doesn't advertise its support
+" Workaround! gnome-terminal supports 256 colors,
+" but doesn't advertise its support.
 if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
+    set t_Co=256
 endif
 
 " Use comma as <Leader> key
@@ -101,3 +105,10 @@ syntax on           " Enable syntax highlighting
 filetype on         " Enable filetype detection
 filetype indent on  " Enable filetype-specific indenting
 filetype plugin on  " Enable filetype-specific plugins
+
+
+" Colorscheme
+let base16colorspace=256
+set t_Co=256
+set background=dark
+colorscheme gruvbox
