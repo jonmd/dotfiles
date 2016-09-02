@@ -107,6 +107,10 @@ filetype indent on  " Enable filetype-specific indenting
 filetype plugin on  " Enable filetype-specific plugins
 
 
+" NERDtree mappings
+nnoremap <F2> :NERDTreeToggle<CR>
+inoremap <F2> :NERDTreeToggle<CR>
+
 " Colorscheme
 let base16colorspace=256
 set t_Co=256
