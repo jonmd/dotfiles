@@ -1,6 +1,33 @@
 " Set incompatible with VI
 set nocompatible
 
+" VUNDLE START
+filetype off
+set rtp+=~/.vim/bundle/vundle.vim
+call vundle#begin()
+
+  " Fugitive
+  Plugin 'tpope/vim-fugitive'
+
+  " L9
+  Plugin 'L9'
+
+  " Nerd tree
+  Plugin 'scrooloose/nerdtree'
+
+  " Ned commenter
+  Plugin 'scrooloose/nerdcommenter'
+
+  " Powerline
+  Plugin 'powerline/powerline'
+
+  " Ctrl + P (Fuzzy search file opener)
+  Plugin 'kien/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
+" VUNDLE END
+
 " Workaround! gnome-terminal supports 256 colors, but doesn't advertise its support
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
