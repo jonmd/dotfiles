@@ -9,7 +9,7 @@ apt-get install i3 i3status dmenu compton
 ## urxvt / rxvt-unicode
 
 ```
-apt-get install rxvt-unicode
+apt-get install rxvt-unicode-256color
 ```
 
 ## Fonts
