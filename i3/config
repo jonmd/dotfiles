@@ -26,7 +26,7 @@ set $locker i3lock -u -i scripts/wallpapers/*.png -t
 ## font is specified in the bar {} block below.
 ##
 
-font pango:DejaVu Sans Mono 9
+font pango:DejaVu Sans Mono, Awesome, Icons 9
 
 
 ##
@@ -299,7 +299,7 @@ bindsym $mod+minus scratchpad show
 ##
 
 # By default, no borders
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 # 1px border for terminal
 for_window [class="URxvt"] border pixel 1
