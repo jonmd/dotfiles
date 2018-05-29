@@ -5,4 +5,4 @@ if [ -d "$HOME/.bin" ]; then
     export PATH="$PATH"
 fi
 
-exec dmenu_run
+exec dmenu_run -fn "pango:DejaVu Sans Mono-16"
