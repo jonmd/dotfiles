@@ -5,4 +5,6 @@ if [ -d "$HOME/.bin" ]; then
     export PATH="$PATH"
 fi
 
-exec dmenu_run -fn "pango:DejaVu Sans Mono-16"
+exec dmenu_run \
+    -fn "DejaVu Sans Mono:antialiasing=true:bold:pixelsize=28" \
+    -nb '#e8d0d0' -nf '#505050' -sb '#d3869b' -sf '#000'
