@@ -38,3 +38,16 @@ apt install fonts-font-awesome
 ```
 apt install lxappearance
 ```
+
+## Ubuntu 18.04 and newer
+
+Ubuntu 18.04 uses Wayland by default. You may need to **disable Wayland** (to be able
+to use X instead) for i3wm.
+
+In the file **/etc/gdm3/custom.conf**, set `WaylandEnable` to `false`. Then remember
+to **reboot**.
+
+```
+[daemon]
+WaylandEnable=false
+```
