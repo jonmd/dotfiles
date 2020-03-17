@@ -51,3 +51,9 @@ to **reboot**.
 [daemon]
 WaylandEnable=false
 ```
+
+## Firefox theme
+
+Install the Humble Gruvbox theme Mekeor Melire:
+
+https://addons.mozilla.org/en-US/firefox/addon/humble-gruvbox
