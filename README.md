@@ -104,3 +104,17 @@ Add the following at the end of you `.bashrc`:
 export PS1_ORIGINAL='$PS1'
 export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[34m\]$(__git_ps1 " %s ")\[\e[0m\]\$ '
 ```
+
+## Mouse sensitivity cli
+
+```
+# Find your mouse
+$ xinput --list --short
+
+# List properties for mouse
+$ xinput --list-props <device id>
+
+# Set mouse transformation matrix
+# Example sets half speed, as the default is: [ 1 0 0   0 1 0   0 0 1 ]
+$ xinput --set-prop "<device name>" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1
+```
