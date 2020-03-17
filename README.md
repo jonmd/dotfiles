@@ -66,3 +66,41 @@ vim and run the following to install plugins via Vundle:
 ```
 :VundleInstall
 ```
+
+## Virtualenv-wrapper
+
+Disable virtualenv from modifing PS1 by appending the following line to your `.bashrc`:
+
+```
+# Virtualenv stuff
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+```
+
+Then update the `.virtualenvs/postactivate` file to create nice prompt:
+
+```
+#!/bin/bash
+# This hook is sourced after every virtualenv is activated.
+
+_OLD_VIRTUAL_PS1="$PS1"
+if [ "x" != x ] ; then
+    PS1="$PS1"
+else
+    PS1="\[\e[33m\]`basename \"$VIRTUAL_ENV\"`\[\e[0m\] $PS1"
+fi
+export PS1
+```
+
+Note that the params `\[ .. \]` allows you to write stuff that shouldn't be counted
+towards line width in bash. That's why `\e[33m` in placed inside those parens, like so:
+`\[\e[33m\]`.
+
+## Show git branch
+
+Add the following at the end of you `.bashrc`:
+
+```
+# Git branch
+export PS1_ORIGINAL='$PS1'
+export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[34m\]$(__git_ps1 " %s ")\[\e[0m\]\$ '
+```
