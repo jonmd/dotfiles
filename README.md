@@ -57,3 +57,12 @@ WaylandEnable=false
 Install the Humble Gruvbox theme Mekeor Melire:
 
 https://addons.mozilla.org/en-US/firefox/addon/humble-gruvbox
+
+## Vim
+
+After running `install.sh` (see above) to set up `.vimrc` and `.vim/`, start
+vim and run the following to install plugins via Vundle:
+
+```
+:VundleInstall
+```
