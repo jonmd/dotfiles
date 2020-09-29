@@ -39,7 +39,23 @@ apt install fonts-font-awesome
 apt install lxappearance
 ```
 
-## Ubuntu 18.04 and newer
+## Ubuntu 20.04
+
+You have to create a file with the name `/usr/share/xsessions/i3.desktop` (can be anything else, what is important is the **Name** property below). The contents should be like this:
+
+```
+[Desktop Entry]
+Name=i3
+Comment=improved dynamic tiling window manager
+Exec=i3
+TryExec=i3
+Type=Application
+X-LightDM-DesktopName=i3
+DesktopNames=i3
+Keywords=tiling;wm;windowmanager;window;manager;
+```
+
+## Ubuntu 18.04
 
 Ubuntu 18.04 uses Wayland by default. You may need to **disable Wayland** (to be able
 to use X instead) for i3wm.
