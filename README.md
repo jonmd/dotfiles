@@ -38,3 +38,15 @@ apt install fonts-font-awesome
 ```
 apt install lxappearance
 ```
+
+## Mouse sensitivity
+
+Find the mouse with xinput and set the coordinate transformation matrix:
+
+```
+# Find the mouse
+$ xinput --list --short
+# Set half sensitivity
+$ xinput --set-prop "<mouse name or id>" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1
+```
+
