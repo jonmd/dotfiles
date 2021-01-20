@@ -6,7 +6,7 @@
 # $ rmvenv myvirtualenv # removes venv
 
 # Options
-PYTHON_EXEC="python3.7"
+PYTHON_EXEC="python3.9"
 export VENV_HOME="$HOME/.venv"
 
 # Ensure directory $VENV_HOME exists
@@ -78,3 +78,14 @@ unset_ps1() {
         unset _OLD_PS1_JONMD
     fi
 }
+
+# Bash autocompletions for venv command
+_venv_completions() {
+  venv_items="`ls -1 "$HOME/.venv"`"
+  for t in $venv_items; do
+    COMPREPLY+=("$t")
+  done
+}
+
+complete -F _venv_completions venv
+
