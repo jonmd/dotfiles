@@ -323,8 +323,8 @@ for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Previe
 set $LeftScreen VGA-0
 set $RightScreen VGA-1
 exec xrandr --output $RightScreen --auto --right-of $LeftScreen
-workspace $WS1 output $LeftScreen
-workspace $WS2 output $RightScreen
+#workspace $WS1 output $LeftScreen
+#workspace $WS2 output $RightScreen
 
 
 ##
