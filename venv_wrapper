@@ -90,13 +90,10 @@ unset_ps1() {
 
 # Bash autocompletions for venv command
 _venv_completions() {
-  venv_items="`ls -1 "$HOME/.venv"`"
-  for t in $venv_items; do
-    COMPREPLY+=("$t")
-  done
+  venv_items="$(ls -1 "$HOME/.venv")"
+  COMPREPLY=($(compgen -W "$venv_items" "${COMP_WORDS[1]}"))
 }
 
 complete -F _venv_completions venv
-
 
 
