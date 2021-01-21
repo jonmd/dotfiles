@@ -2,8 +2,9 @@
 # usage
 # $ mkvenv myvirtualenv # creates venv under ~/.venv/
 # $ venv myvirtualenv   # activates venv
-# $ deactivate          # deactivates venv
+# $ devenv              # deactivates venv
 # $ rmvenv myvirtualenv # removes venv
+# $ cdvirtualenv        # change directory to venv home
 
 # Options
 PYTHON_EXEC="python3.9"
@@ -64,6 +65,14 @@ venvname() {
     fi
 }
 
+# Utils to work with
+cdvirtualenv() {
+  if [ -n "${VIRTUAL_ENV}" ];
+    then
+        cd "$VENV_HOME/`venvname`"
+  fi
+}
+
 # Set the PS1
 set_ps1() {
     export _OLD_PS1_JONMD="${PS1:-}"
@@ -88,4 +97,6 @@ _venv_completions() {
 }
 
 complete -F _venv_completions venv
+
+
 
