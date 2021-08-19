@@ -13,11 +13,11 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcdlight
 Xft.autohint: false
-URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=12
-URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=12
-URxvt.italicFont: xft:DejaVu Sans Mono:style=regular:antialias=true:pixelsize=12
-URxvt.boldItalicFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=12
-URxvt.letterSpace: -1
+URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=14
+URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
+URxvt.italicFont: xft:DejaVu Sans Mono:style=regular:antialias=true:pixelsize=14
+URxvt.boldItalicFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
+URxvt.letterSpace: -2
 URxvt.scrollBar: off
 
 ! Enable keybinds
@@ -50,7 +50,7 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 ! Clickable URLs
-URxvt.url-launcher: /usr/bin/chromium-browser
+URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline fg5
 ! Also, list recent (up to 10) URLs:
