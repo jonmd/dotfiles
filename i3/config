@@ -344,6 +344,15 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 
+# Spotify
+bindsym XF86AudioNext exec --no-startup-id /home/jonmd/git/dotfiles/spotify_control next
+bindsym XF86AudioPrev exec --no-startup-id /home/jonmd/git/dotfiles/spotify_control next
+bindsym XF86AudioPlay exec --no-startup-id /home/jonmd/git/dotfiles/spotify_control playpause
+
+# Screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+
 ##
 ## Startup commands
 ##
