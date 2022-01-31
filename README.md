@@ -134,3 +134,11 @@ $ xinput --list-props <device id>
 # Example sets half speed, as the default is: [ 1 0 0   0 1 0   0 0 1 ]
 $ xinput --set-prop "<device name>" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1
 ```
+
+## Don't turn off screen
+
+```bash
+$ xset s off
+$ xset -dpms
+$ xset s noblank
+```
