@@ -6,7 +6,7 @@ Install packages, clone repo, and set up links to configuration files in `$HOME`
 
 ```
 sudo apt install i3 i3status dmenu compton rxvt-unicode-256color \
-         fonts-font-awesome lxappearance
+         fonts-font-awesome lxappearance redshift redshift-gtk
 git clone git@gitlab.com:jonmd/dotfiles
 cd dotfiles
 ./install.sh
@@ -142,3 +142,11 @@ $ xset s off
 $ xset -dpms
 $ xset s noblank
 ```
+
+## Night mode (Redshift)
+
+Use Redshift to turn on night mode (dim monitor with warmer/yellowish color).
+
+ 1. Place the config file in `~/.config/redshift.conf` (see file in this repo)
+ 2. Run `redshift-gtk` (added to startup in X1's i3wm config)
+

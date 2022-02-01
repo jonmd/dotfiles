@@ -334,6 +334,12 @@ for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Previe
 # Display a small calendar (gsimplecal)
 bindsym $mod+c exec --no-startup-id gsimplecal
 
+# Flameshot
+bindsym $mod+x exec --no-startup-id flameshot gui
+
+# Start Redshift
+bindsym $mod+control+x exec --no-startup-id redshift-gtk
+
 # Start dmenu (a program launcher)
 bindsym $mod+p exec --no-startup-id $HOME/.i3/dmenu_fix_path
 
@@ -344,6 +350,11 @@ bindsym $mod+shift+l exec --no-startup-id amixer -D pulse sset Master 5%- unmute
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
+
+# Spotify
+bindsym XF86AudioNext exec --no-startup-id /home/jonmd/git/dotfiles/spotify_control next
+bindsym XF86AudioPrev exec --no-startup-id /home/jonmd/git/dotfiles/spotify_control next
+bindsym XF86AudioPlay exec --no-startup-id /home/jonmd/git/dotfiles/spotify_control playpause
 
 # Screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 5%+
@@ -362,6 +373,7 @@ exec --no-startup-id xrdb -merge ~/.Xdefaults
 
 # Set wallpaper
 exec --no-startup-id feh --bg-scale ~/.i3/wallhaven-0plj7p.jpg
+
 
 # Start a window compositor (https://wiki.archlinux.org/index.php/Compton)
 #exec --no-startup-id compton --config ~/.compton.conf -b
