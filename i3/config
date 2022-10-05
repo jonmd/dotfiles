@@ -306,6 +306,7 @@ for_window [class="URxvt"] border pixel 1
 
 # Tiny floating calendar
 for_window [class="(?i)gsimplecal"] floating enable
+for_window [class="(?i)speedcrunch"] floating enable
 
 # These windows can float:
 for_window [window_role="pop-up"] floating enable
@@ -333,6 +334,13 @@ exec xrandr --output $RightScreen --auto --right-of $LeftScreen
 
 # Display a small calendar (gsimplecal)
 bindsym $mod+c exec --no-startup-id gsimplecal
+bindsym $mod+control+c exec --no-startup-id speedcrunch
+
+# Flameshot
+bindsym $mod+x exec --no-startup-id flameshot gui
+
+# Start Redshift
+bindsym $mod+control+x exec --no-startup-id redshift-gtk
 
 # Start dmenu (a program launcher)
 bindsym $mod+p exec --no-startup-id $HOME/.i3/dmenu_fix_path
