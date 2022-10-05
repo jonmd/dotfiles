@@ -6,7 +6,8 @@ Install packages, clone repo, and set up links to configuration files in `$HOME`
 
 ```
 sudo apt install i3 i3status dmenu compton rxvt-unicode-256color \
-         fonts-font-awesome lxappearance redshift redshift-gtk
+         fonts-font-awesome lxappearance redshift redshift-gtk \
+         flameshot speedcrunch
 git clone git@gitlab.com:jonmd/dotfiles
 cd dotfiles
 ./install.sh
@@ -142,6 +143,11 @@ $ xset s off
 $ xset -dpms
 $ xset s noblank
 ```
+
+## Flameshot
+
+Configuration file found in `.config/Dharkael/flameshot.ini`. If copy is not working,
+run `flameshot config` and untick "Close after capture".
 
 ## Night mode (Redshift)
 
