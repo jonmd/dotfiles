@@ -21,6 +21,7 @@ general {
 order += "disk /"
 #order += "run_watch VPN"
 order += "ethernet wlp0s20f3"
+order += "ethernet enxf4a80d206927"
 order += "volume master"
 order += "load"
 order += "battery 0"
@@ -30,6 +31,11 @@ ethernet wlp0s20f3 {
 # if you use %speed, i3status requires root privileges
     format_up = " wlp0s20f3 %ip "
     format_down = " wlp0s20f3  "
+}
+
+ethernet enxf4a80d206927 {
+    format_up = " enxf4a80d206927 %ip "
+    format_down = " enxf4a80d206927  "
 }
 
 run_watch VPN {
