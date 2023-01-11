@@ -21,6 +21,12 @@ if [ ! -d "$HOME/.config/i3status" ]; then
     ln -sT "$DOTFILES/config/i3status" "$HOME/.config/i3status"
 fi
 
+# .config/rofi
+if [ ! -d "$HOME/.config/rofi" ]; then
+    mkdir -p "$HOME/.config"
+    ln -sT "$DOTFILES/config/rofi" "$HOME/.config/rofi"
+fi
+
 # .vimrc
 if [ ! -f "$HOME/.vimrc" ]; then
     ln -sT "$DOTFILES/vimrc" "$HOME/.vimrc"

@@ -342,8 +342,12 @@ bindsym $mod+x exec --no-startup-id flameshot gui
 # Start Redshift
 bindsym $mod+control+x exec --no-startup-id redshift-gtk
 
-# Start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id $HOME/.i3/dmenu_fix_path
+## Replaced with rofi
+## # Start dmenu (a program launcher)
+## bindsym $mod+p exec --no-startup-id $HOME/.i3/dmenu_fix_path
+
+# Start rofi (a program launcher)
+bindsym $mod+p exec --no-startup-id $HOME/.i3/rofi_fix_path
 
 # Volume if keyboard has media keys
 bindsym $mod+shift+o exec --no-startup-id amixer -D pulse sset Master 5%+ unmute
