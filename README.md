@@ -7,7 +7,7 @@ Install packages, clone repo, and set up links to configuration files in `$HOME`
 ```
 sudo apt install i3 i3status dmenu compton rxvt-unicode-256color \
          fonts-font-awesome lxappearance redshift redshift-gtk \
-         flameshot speedcrunch rofi
+         flameshot speedcrunch rofi brightnessctl
 git clone git@gitlab.com:jonmd/dotfiles
 cd dotfiles
 ./install.sh
@@ -18,6 +18,17 @@ cd dotfiles
 ```
 apt install i3 i3status dmenu compton
 ```
+
+## Adjust brightness
+
+Install `brightnessctl`. By default it will only allow root to change the brightness,
+but if you add your user to the `video` group you are allowed to use it:
+
+```
+apt install brightnessctl
+usermod -aG video <user>
+```
+
 
 ## urxvt / rxvt-unicode
 
