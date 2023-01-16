@@ -7,7 +7,7 @@ Install packages, clone repo, and set up links to configuration files in `$HOME`
 ```
 sudo apt install i3 i3status dmenu compton rxvt-unicode-256color \
          fonts-font-awesome lxappearance redshift redshift-gtk \
-         flameshot speedcrunch rofi brightnessctl
+         flameshot speedcrunch rofi brightnessctl gsimplecal
 git clone git@gitlab.com:jonmd/dotfiles
 cd dotfiles
 ./install.sh
