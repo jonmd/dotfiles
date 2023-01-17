@@ -133,6 +133,19 @@ export PS1_ORIGINAL='$PS1'
 export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[34m\]$(__git_ps1 " %s ")\[\e[0m\]\$ '
 ```
 
+## Remove duplicates from `.bash_history`
+
+To remove duplicates from BASH history, set `erasedups` in `HISTCONTROL`. In addition,
+you would also like to set `ignorespace:ignoredups` which `ignoreboth` does.
+
+So set `HISTCONTROL` to the following in your `.bashrc` file (note: the option was
+already defined in my `.bashrc` on Ubuntu 22.04 – you should probably overwrite it
+there):
+
+```bash
+export HISTCONTROL=ignoreboth:erasedups
+```
+
 ## Mouse sensitivity cli
 
 ```bash
