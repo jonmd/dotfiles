@@ -50,7 +50,7 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 ! Clickable URLs
-URxvt.url-launcher: /usr/bin/firefox
+URxvt.url-launcher: /snap/bin/firefox
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline fg5
 ! Also, list recent (up to 10) URLs:
