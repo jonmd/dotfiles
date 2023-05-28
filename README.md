@@ -5,19 +5,21 @@
 Install packages, clone repo, and set up links to configuration files in `$HOME`.
 
 ```
-sudo apt install i3 i3status dmenu compton rxvt-unicode-256color \
+sudo apt install i3 i3status dmenu compton rxvt-unicode fzf \
          fonts-font-awesome lxappearance redshift redshift-gtk \
-         flameshot speedcrunch rofi brightnessctl gsimplecal
+         flameshot speedcrunch rofi brightnessctl gsimplecal 
 git clone git@gitlab.com:jonmd/dotfiles
 cd dotfiles
 ./install.sh
 ```
+
 
 ## i3 with compton
 
 ```
 apt install i3 i3status dmenu compton
 ```
+
 
 ## Adjust brightness
 
@@ -30,11 +32,33 @@ usermod -aG video <user>
 ```
 
 
-## urxvt / rxvt-unicode
+## Terminal: urxvt / rxvt-unicode
+
+It used to be `rxvt-unicode-256color`, but now it's only `rxvt-unicode`:
 
 ```
-apt install rxvt-unicode-256color
+apt install rxvt-unicode
 ```
+
+### Swap out `ctrl` + `r` (fzf)
+
+If you want to use the fzf package for autocomplete, you need to install it:
+
+```
+apt install fzf
+```
+
+Then update your `.bashrc` to use fzf:
+
+
+```bash
+# Append this line to ~/.bashrc to enable fzf keybindings for Bash:
+source /usr/share/doc/fzf/examples/key-bindings.bash
+
+# Append this line to ~/.bashrc to enable fuzzy auto-completion for Bash:
+source /usr/share/doc/fzf/examples/completion.bash
+```
+
 
 ## Fonts
 
@@ -45,11 +69,13 @@ icons (there is a version in the Ubuntu package repo):
 apt install fonts-font-awesome
 ```
 
+
 ## Adjust window theme
 
 ```
 apt install lxappearance
 ```
+
 
 ## Ubuntu 20.04
 
@@ -67,6 +93,7 @@ DesktopNames=i3
 Keywords=tiling;wm;windowmanager;window;manager;
 ```
 
+
 ## Ubuntu 18.04
 
 Ubuntu 18.04 uses Wayland by default. You may need to **disable Wayland** (to be able
@@ -80,11 +107,14 @@ to **reboot**.
 WaylandEnable=false
 ```
 
+
 ## Firefox theme
 
 Install the Humble Gruvbox theme Mekeor Melire:
 
 https://addons.mozilla.org/en-US/firefox/addon/humble-gruvbox
+
+
 
 ## Vim
 
@@ -94,6 +124,7 @@ vim and run the following to install plugins via Vundle:
 ```
 :VundleInstall
 ```
+
 
 ## Virtualenv-wrapper
 
@@ -123,6 +154,7 @@ Note that the params `\[ .. \]` allows you to write stuff that shouldn't be coun
 towards line width in bash. That's why `\e[33m` in placed inside those parens, like so:
 `\[\e[33m\]`.
 
+
 ## Show git branch
 
 Add the following at the end of you `.bashrc`:
@@ -132,6 +164,7 @@ Add the following at the end of you `.bashrc`:
 export PS1_ORIGINAL='$PS1'
 export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[34m\]$(__git_ps1 " %s ")\[\e[0m\]\$ '
 ```
+
 
 ## Remove duplicates from `.bash_history`
 
@@ -145,6 +178,7 @@ there):
 ```bash
 export HISTCONTROL=ignoreboth:erasedups
 ```
+
 
 ## Mouse sensitivity cli
 
@@ -160,6 +194,7 @@ $ xinput --list-props <device id>
 $ xinput --set-prop "<device name>" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1
 ```
 
+
 ## Don't turn off screen
 
 ```bash
@@ -168,10 +203,12 @@ $ xset -dpms
 $ xset s noblank
 ```
 
+
 ## Flameshot
 
 Configuration file found in `.config/Dharkael/flameshot.ini`. If copy is not working,
 run `flameshot config` and untick "Close after capture".
+
 
 ## Night mode (Redshift)
 
