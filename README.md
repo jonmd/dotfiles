@@ -59,6 +59,15 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 source /usr/share/doc/fzf/examples/completion.bash
 ```
 
+### `.bash_history`
+
+```bash
+# How history is stored in bash
+# ignoreboth: Remove white space at beginning and end
+# erasedups: Don't write duplicates to the history file
+export HISTCONTROL=ignoreboth:erasedups
+```
+
 
 ## Fonts
 
