@@ -346,7 +346,8 @@ bindsym $mod+control+x exec --no-startup-id redshift-gtk
 # bindsym $mod+p exec --no-startup-id $HOME/.i3/dmenu_fix_path
 
 # Start rofi (program launcher)
-bindsym $mod+p exec --no-startup-id $HOME/.i3/rofi_fix_path
+# bindsym $mod+p exec --no-startup-id $HOME/.i3/rofi_fix_path
+bindsym $mod+p exec --no-startup-id rofi -show run
 
 # Volume if keyboard has media keys
 bindsym $mod+shift+o exec --no-startup-id amixer -D pulse sset Master 5%+ unmute
