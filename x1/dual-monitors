@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+fullsize="$((2560 + 2560))x1440"
+
+s1="DP-4"
+m1="2560x1440"
+f1="59.95"
+o1="0x0"
+
+s2="DP-0"
+m2="2560x1440"
+f2="59.95"
+o2="2560x0"
+
+# Adjust screen resolutions
+xrandr --fb "$fullsize" \
+    --output "$s1" --mode "$m1" --pos "$o1" --rate "$f1" \
+    --output "$s2" --mode "$m2" --pos "$o2" --rate "$f2"
+
