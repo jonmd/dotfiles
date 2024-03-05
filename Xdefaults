@@ -14,11 +14,20 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcdlight
 Xft.autohint: false
-URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=14
-URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
-URxvt.italicFont: xft:DejaVu Sans Mono:style=regular:antialias=true:pixelsize=14
-URxvt.boldItalicFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
-URxvt.letterSpace: -2
+
+! URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=14
+! URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
+! URxvt.italicFont: xft:DejaVu Sans Mono:style=regular:antialias=true:pixelsize=14
+! URxvt.boldItalicFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
+! URxvt.letterSpace: -2
+
+URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=15
+URxvt.boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=15
+URxvt.italicFont: xft:DejaVu Sans Mono:style=regular:antialias=true:pixelsize=15
+URxvt.boldItalicFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=15
+URxvt.letterSpace: -1
+
+! No scrollbar, please
 URxvt.scrollBar: off
 
 ! Enable keybinds
